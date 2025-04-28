@@ -1,0 +1,146 @@
+p {
+    margin: 0; /* Alapértelmezett margó eltávolítása */
+    padding: 0; /* Extra belső tér eltávolítása */
+}
+
+*{
+    font-family: "Roboto", sans-serif;
+    
+}
+.content{
+    background-color:#FFF2DB;
+    color:#00879E;
+}
+.sidebar {
+    background-color: #00879E; /* Sötétszürke háttér */
+    height: 100vh; /* Teljes magasság */
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    
+}
+.sidebar a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    padding-top:3%;
+    color:#FFF2DB;
+}
+.sidebar a:hover {
+    background-color: #003092;
+    text-decoration: none;
+    color:#FFF2DB;
+}
+.content {
+    padding: 20px;
+}
+.title{
+    padding-top:10px;
+    text-align:center;
+    padding-bottom:10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.title:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 3px 3px rgba(0, 48, 146, 0.15);
+}
+.ul, li{
+    list-style-type: none;
+}
+.stack {
+    padding-top: 15px;
+    list-style: none; /* Alapértelmezett listajelzés kikapcsolása */
+}
+.stack li:hover{
+    font-size: 18px;
+}
+.stack li {
+    position: relative;
+    padding-left: 40px; /* Hely a listaképnek */
+}
+
+.stack li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; /* Kép szélessége */
+    height: 20px; /* Kép magassága */
+    background-image: url(./assets/list_img.png);
+    background-size: contain; /* Méretezés */
+    background-repeat: no-repeat;
+}
+h3{
+    text-align: left;
+    padding-top:20px;
+}
+.pick{
+    transition: padding 0.5s ease;
+}
+.pick:hover{
+    padding:10px;
+    box-shadow: 0 3px 3px rgba(0, 48, 146, 0.15);
+}
+.text{
+    padding:20px;
+    font-size:16px;
+    text-align: left;
+    display: inline-block;
+}
+.logo-image {
+    margin-bottom:5%;
+    width: 100% !important;       /* A teljes szélesség */
+    max-width: 50px !important;  /* Maximum szélesség 150px */
+    height: auto !important;       /* Magasság automatikusan arányosan */
+}
+
+.course-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* vagy start, ha nem kell nyomni az alját */
+    background-color: #fff; /* ha kell */
+    padding: 0.5rem;
+}
+
+.course-image {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center top;
+    width: 100%;
+    height: 320px; /* vagy fix height ha szükséges */
+}
+.experiences li{
+    position: relative;
+    padding-left: 40px; /* Hely a listaképnek */
+    padding-top:2px;
+    padding-bottom:2px;
+}
+.experiences li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; /* Kép szélessége */
+    height: 20px; /* Kép magassága */
+    background-image: url(./assets/check-mark.png);
+    background-size: contain; /* Méretezés */
+    background-repeat: no-repeat;
+}
+.contact{
+    padding-top:650px;
+    color:#FFF2DB;
+}
+@media (max-width: 768px) {
+    .contact {
+        padding-top: 100px; /* kisebb padding mobilon, hogy ne legyen túl nagy üres rész */
+        text-align: center; /* opcionális: középre igazítás mobilon */
+    }
+
+    .course-image {
+        height: auto; /* teljesen rugalmas legyen a kép magassága */
+        aspect-ratio: 16 / 9; /* maradhat, hogy arányos maradjon */
+    }
+}
